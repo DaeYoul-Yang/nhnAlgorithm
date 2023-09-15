@@ -1,0 +1,37 @@
+//case 결과값 같을 때 주의
+
+public class algorithm0915 {
+
+
+        public static void main(String[] args) {
+            System.out.println(factorial(5));
+            System.out.println(fibonacci(10));
+
+        }
+
+        public static long factorial(int number) {
+            switch (number) {
+                case 0:
+                case 1:
+                    return 1;
+
+                default:
+                    return factorial(number-1)*number;
+            }
+
+        }
+
+        public static long fibonacci(int number) {
+            switch (number){
+                case 0:
+                    return 0;
+                case 1:
+                case 2:
+                    return 1;
+                default:
+                    return fibonacci(number-1)+fibonacci(number-2);
+            }
+
+        }
+
+}
